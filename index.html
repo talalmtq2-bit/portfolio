@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talal Qwider - Creator & Developer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #05070b;
+            color: #f3f4f6;
+        }
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+        .bento-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(3, 7, 18, 0.9) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            backdrop-filter: blur(16px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(16, 185, 129, 0.8);
+            box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+        }
+        
+        /* Sequential Wave Animation for Terminal Buttons */
+        @keyframes waveAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        .dot-red {
+            animation: waveAnimation 1.2s infinite ease-in-out;
+            animation-delay: 0s;
+        }
+        .dot-yellow {
+            animation: waveAnimation 1.2s infinite ease-in-out;
+            animation-delay: 0.15s;
+        }
+        .dot-green {
+            animation: waveAnimation 1.2s infinite ease-in-out;
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-400 selection:text-black">
+
+    <!-- Navbar Component -->
+    <nav class="fixed top-0 left-0 z-50 w-full bg-[#05070b]/85 backdrop-blur-xl border-b border-emerald-500/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-400 to-cyan-400 flex items-center justify-center font-bold text-black text-base shadow-lg shadow-emerald-500/40 code-font">
+                    &lt;/&gt;
+                </div>
+                <span class="text-white font-bold text-lg tracking-tight">Talal Qwider</span>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex gap-6 items-center">
+                <a href="#home" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm font-medium">Home</a>
+                <a href="#socials" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm font-medium">Socials</a>
+                <a href="#cv-skills" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm font-medium">المهارات والـ CV</a>
+            </div>
+
+            <!-- Social Icons Top -->
+            <div class="flex items-center space-x-4 text-zinc-400 text-lg">
+                <a href="https://www.instagram.com/_talalqwider?stkn=MTFiYmU5ZDBlbzZtdg==" target="_blank" class="hover:text-pink-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@talalqwaider?_r=1&_t=ZS-9AB7hwWxM6D" target="_blank" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://discord.gg/ns-rp" target="_blank" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="w-full pt-28 px-6 max-w-6xl mx-auto space-y-24">
+        
+        <!-- Hero Section -->
+        <section id="home" class="text-center py-16 relative overflow-hidden">
+            <div class="absolute inset-0 -z-10 flex justify-center items-center pointer-events-none">
+                <div class="w-[30rem] h-[30rem] bg-emerald-500/15 rounded-full blur-[140px]"></div>
+                <div class="w-[20rem] h-[20rem] bg-cyan-400/15 rounded-full blur-[120px]"></div>
+            </div>
+
+            <!-- Professional Code Editor / Terminal Logo Box -->
+            <div class="max-w-md mx-auto mb-8 rounded-2xl bg-[#090d16] border border-emerald-500/40 shadow-2xl shadow-emerald-950/60 overflow-hidden text-left">
+                <!-- Terminal Header -->
+                <div class="bg-[#0f172a]/80 px-4 py-3 border-b border-emerald-500/10 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#ED6A5E] dot-red"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#F4BE4F] dot-yellow"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-[#61C554] dot-green"></div>
+                    </div>
+                    <div class="text-xs text-emerald-400 code-font flex items-center gap-1.5 font-semibold">
+                        <i class="fa-solid fa-code text-cyan-400"></i> dev-profile.tsx
+                    </div>
+                    <div class="w-10"></div>
+                </div>
+                <!-- Terminal Body -->
+                <div class="p-5 code-font text-xs sm:text-sm space-y-2 leading-relaxed">
+                    <p class="text-slate-500">// Welcome to my workspace</p>
+                    <p>
+                        <span class="text-emerald-400 font-semibold">const</span> <span class="text-amber-300">developer</span> <span class="text-pink-400">=</span> {
+                    </p>
+                    <p class="pl-4">
+                        <span class="text-cyan-300">name</span>: <span class="text-emerald-300">"Talal Qwider"</span>,
+                    </p>
+                    <p class="pl-4">
+                        <span class="text-cyan-300">role</span>: <span class="text-emerald-300">"Full-Stack & FiveM"</span>,
+                    </p>
+                    <p class="pl-4">
+                        <span class="text-cyan-300">status</span>: <span class="text-emerald-300">"Ready to Code"</span>
+                    </p>
+                    <p>};</p>
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 text-white">
+                Talal Qwider
+            </h1>
+            <p class="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent font-bold text-lg md:text-xl mb-4">
+                Full-Stack Developer & FiveM Expert
+            </p>
+            <p class="text-slate-400 text-base max-w-xl mx-auto leading-relaxed">
+                مرحباً بك في مساحتي الرقمية. تطوير مخصص، برمجة متقدمة، ومحتوى إبداعي فريد.
+            </p>
+        </section>
+
+        <!-- Socials Bento Grid Section -->
+        <section id="socials" class="space-y-6">
+            <div>
+                <h2 class="text-2xl font-bold tracking-tight text-white">Connect With Me</h2>
+                <p class="text-slate-400 text-sm">تابعني عبر منصات التواصل الاجتماعي الرسمية.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/_talalqwider?stkn=MTFiYmU5ZDBlbzZtdg==" target="_blank" class="bento-card rounded-3xl p-6 flex flex-col justify-between group relative overflow-hidden">
+                    <div class="flex justify-between items-start z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-black/50 border border-emerald-500/30 flex items-center justify-center text-xl text-pink-400 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <span class="text-slate-500 group-hover:text-emerald-400 transition-colors text-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <div class="mt-10 z-10">
+                        <h3 class="text-lg font-bold mb-0.5 text-white group-hover:text-emerald-300 transition-colors">Instagram</h3>
+                        <p class="text-slate-400 text-xs tracking-wide">Follow</p>
+                    </div>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@talalqwaider?_r=1&_t=ZS-9AB7hwWxM6D" target="_blank" class="bento-card rounded-3xl p-6 flex flex-col justify-between group relative overflow-hidden">
+                    <div class="flex justify-between items-start z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-black/50 border border-emerald-500/30 flex items-center justify-center text-xl text-emerald-400 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <span class="text-slate-500 group-hover:text-emerald-400 transition-colors text-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <div class="mt-10 z-10">
+                        <h3 class="text-lg font-bold mb-0.5 text-white group-hover:text-emerald-300 transition-colors">TikTok</h3>
+                        <p class="text-slate-400 text-xs tracking-wide">Follow</p>
+                    </div>
+                </a>
+
+                <!-- Discord -->
+                <a href="https://discord.gg/ns-rp" target="_blank" class="bento-card rounded-3xl p-6 flex flex-col justify-between group relative overflow-hidden">
+                    <div class="flex justify-between items-start z-10">
+                        <div class="w-12 h-12 rounded-2xl bg-black/50 border border-emerald-500/30 flex items-center justify-center text-xl text-cyan-400 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-discord"></i>
+                        </div>
+                        <span class="text-slate-500 group-hover:text-emerald-400 transition-colors text-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                    <div class="mt-10 z-10">
+                        <h3 class="text-lg font-bold mb-0.5 text-white group-hover:text-emerald-300 transition-colors">Discord</h3>
+                        <p class="text-slate-400 text-xs tracking-wide">Follow</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section: المهارات والـ CV -->
+        <section id="cv-skills" class="bento-card rounded-3xl p-8 md:p-12 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider bg-emerald-500/15 text-emerald-300 rounded-full border border-emerald-500/40">
+                        Professional CV & Skills
+                    </span>
+                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight mt-3 text-white">المهارات وخبرات العمل</h2>
+                    <p class="text-slate-400 text-sm mt-1">نبذة عن مسيرتي الاحترافية في التطوير والبرمجة.</p>
+                </div>
+                <a href="https://wa.me/962779641915" target="_blank" class="px-6 py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 text-black font-bold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-emerald-500/30 flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> تواصل معي
+                </a>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                <div class="bg-black/40 p-6 rounded-2xl border border-emerald-500/20 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl border border-emerald-500/30">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">سيرفرات FiveM</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        مختص ببرمجة وتطوير سيرفرات FiveM، ضبط الإعدادات، وإدارة قواعد البيانات باحترافية تامة لأكثر من 3 أعوام.
+                    </p>
+                </div>
+
+                <div class="bg-black/40 p-6 rounded-2xl border border-emerald-500/20 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center text-xl border border-cyan-500/30">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">تطوير مواقع الويب</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        خبرة واسعة في بناء وتطوير واجهات مواقع الويب باستخدام أحدث التقنيات مثل React و Vite و Node.js.
+                    </p>
+                </div>
+
+                <div class="bg-black/40 p-6 rounded-2xl border border-emerald-500/20 space-y-3">
+                    <div class="w-12 h-12 rounded-xl bg-pink-500/15 text-pink-400 flex items-center justify-center text-xl border border-pink-500/30">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">صناعة المحتوى</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        صانع محتوى عما قريب، مع إضافات وأفكار بروفيشنال قوية لتقديم تجارب مرئية فريدة ومميزة للمتابعين.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto w-full text-center py-8 text-slate-500 text-sm border-t border-emerald-500/10 mt-24">
+        <p>&copy; 2026 Talal Qwider. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
